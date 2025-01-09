@@ -45,5 +45,12 @@
 <hr>
 
 ## Инструкция по разворачиванию проекта локально
-- склонировать репозиторий https://github.com/protectedfor/restapi
-- скопировать файл `.env.example` в `.env`
+- Склонировать репозиторий `git clone https://github.com/protectedfor/restapi.git`
+- Выполнить `cp .env.example .env`
+- Создать бд `laravel`
+- Выполнить `sail composer install`
+- Выполнить `sail artisan key:generate`
+- Выполнить `sail artisan migrate`
+- Выполнить `sail artisan db:seed`
+- Выполнить `sail up -d`
+- Открыть в брузере `http://127.0.0.1/request-docs`
