@@ -46,11 +46,18 @@
 
 ## Инструкция по разворачиванию проекта локально
 - Склонировать репозиторий `git clone https://github.com/protectedfor/restapi.git`
+- Выполнить:
+```
+docker run --rm \
+    -u "$(id -u):$(id -g)" \
+    -v "$(pwd):/var/www/html" \
+    -w /var/www/html \
+    laravelsail/php84-composer:latest \
+    composer install --ignore-platform-reqs
+```
 - Выполнить `cp .env.example .env`
-- Создать бд `laravel`
-- Выполнить `sail composer install`
-- Выполнить `sail artisan key:generate`
-- Выполнить `sail artisan migrate`
-- Выполнить `sail artisan db:seed`
+- Создать бд: `laravel`
 - Выполнить `sail up -d`
+- Выполнить `sail artisan key:generate`
+- Выполнить `sail artisan migrate --seed`
 - Открыть в брузере `http://127.0.0.1/request-docs`
