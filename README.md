@@ -57,7 +57,7 @@ docker run --rm \
 ```
 - Выполнить `cp .env.example .env`
 - Создать бд: `laravel`
-- Выполнить `sail up -d`
-- Выполнить `sail artisan key:generate`
-- Выполнить `sail artisan migrate --seed`
+- Выполнить `./vendor/bin/sail up -d`
+- Выполнить `./vendor/bin/sail artisan key:generate`
+- Выполнить `./vendor/bin/sail artisan migrate --seed`
 - Открыть в брузере `http://127.0.0.1/request-docs`
