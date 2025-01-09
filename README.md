@@ -61,3 +61,6 @@ docker run --rm \
 - Выполнить `./vendor/bin/sail artisan key:generate`
 - Выполнить `./vendor/bin/sail artisan migrate --seed`
 - Открыть в брузере `http://127.0.0.1/request-docs`
+
+Статический API ключ передаётся через заголовок `API-KEY`. По-умолчанию: `12345`. <br>
+В request-docs можно выставить отправляемые заголовки глобально для всех запросов во вкладке "Send", разворачивающееся поле для ввода "Set Global Header"
